@@ -27,24 +27,16 @@ public class Square extends Rectangle {
     super(side, side);
   }
 
-  /**
-   * The Square overrides the shapeName method defined in the Rectangle class
-   * (polymorphism). This means that when the BaseShape class calls the
-   * shapeName method on a Rectangle, the shapeName method in the Rectangle
-   * class is called. However, when the shapeName method is called on a Square,
-   * the shapeName method in the Square class is called.
-   */
   @Override
-  protected String shapeName() {
-    return "square";
+  protected ShapeInfo shapeInfo() {
+    ShapeInfo info = new ShapeInfo("square");
+    
+    info.getSides().add(new SideInfo("side", width));
+    info.getSides().add(new SideInfo("side", width));
+    info.getSides().add(new SideInfo("side", width));
+    info.getSides().add(new SideInfo("side", width));
+    
+    return info;
   }
 
-  /**
-   * This overrides the shapeInfo method defined in the Rectangle class.
-   */
-  @Override
-  protected String shapeInfo() {
-    return "4 sides of which all sides have the same length. The length "
-        + "of each side is " + side1;
-  }
 }

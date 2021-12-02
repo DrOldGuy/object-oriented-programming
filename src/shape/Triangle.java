@@ -51,20 +51,14 @@ public class Triangle extends BaseShape {
     return a + b + c;
   }
 
-  /**
-   * 
-   */
   @Override
-  protected String shapeName() {
-    return "triangle";
+  protected ShapeInfo shapeInfo() {
+    ShapeInfo info = new ShapeInfo("triangle");
+    
+    info.getSides().add(new SideInfo("a", a));
+    info.getSides().add(new SideInfo("b", b));
+    info.getSides().add(new SideInfo("c", c));
+    
+    return info;
   }
-
-  /**
-   * 
-   */
-  @Override
-  protected String shapeInfo() {
-    return String.format("3 sides, where a=%.2f, b=%.2f, c=%.2f", a, b, c);
-  }
-
 }

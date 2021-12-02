@@ -10,19 +10,19 @@ package shape;
  *
  */
 public class Rectangle extends BaseShape {
-  protected double side1;
-  protected double side2;
+  protected double width;
+  protected double height;
 
   /**
    * Rectangles are 4-sided shapes in which the opposite sides have the same
    * length. The constructor supplies the lengths of the two sides.
    * 
-   * @param side1 The length of one side
-   * @param side2 The length of the other side
+   * @param width The width of the rectangle
+   * @param height The height of the rectangle
    */
-  public Rectangle(double side1, double side2) {
-    this.side1 = side1;
-    this.side2 = side2;
+  public Rectangle(double width, double height) {
+    this.width = width;
+    this.height = height;
   }
 
   /**
@@ -31,7 +31,7 @@ public class Rectangle extends BaseShape {
    */
   @Override
   public double area() {
-    return side1 * side2;
+    return width * height;
   }
 
   /**
@@ -39,24 +39,19 @@ public class Rectangle extends BaseShape {
    */
   @Override
   public double perimeter() {
-    return (side1 + side2) * 2;
+    return (width + height) * 2;
   }
 
-  /**
-   * 
-   */
   @Override
-  protected String shapeName() {
-    return "rectangle";
-  }
-
-  /**
-   * 
-   */
-  @Override
-  protected String shapeInfo() {
-    return "4 sides of which opposite sides are equal. Side 1=" + side1
-        + ", side 2=" + side2;
+  protected ShapeInfo shapeInfo() {
+    ShapeInfo info = new ShapeInfo("rectangle");
+    
+    info.getSides().add(new SideInfo("width", width));
+    info.getSides().add(new SideInfo("height", height));
+    info.getSides().add(new SideInfo("width", width));
+    info.getSides().add(new SideInfo("height", height));
+    
+    return info;
   }
 
 }
