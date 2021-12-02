@@ -1,7 +1,10 @@
 /**
  * 
  */
-package shape;
+package shape.shapes;
+
+import shape.ShapeInfo;
+import shape.SideInfo;
 
 /**
  * A square is a rectangle with the constraint that all sides are the same

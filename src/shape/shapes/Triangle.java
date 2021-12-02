@@ -1,7 +1,10 @@
 /**
  * 
  */
-package shape;
+package shape.shapes;
+
+import shape.ShapeInfo;
+import shape.SideInfo;
 
 /**
  * This class defines a triangular shape. Note the object-oriented principle of

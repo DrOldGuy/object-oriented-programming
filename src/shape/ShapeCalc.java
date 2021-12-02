@@ -1,12 +1,11 @@
 /**
  * 
  */
-package calc;
+package shape;
 
-import shape.Rectangle;
-import shape.Shape;
-import shape.Square;
-import shape.Triangle;
+import shape.shapes.Rectangle;
+import shape.shapes.Square;
+import shape.shapes.Triangle;
 
 /**
  * This is the entry point for the application. It creates some shapes and calls
