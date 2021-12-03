@@ -23,7 +23,7 @@ Let's see an example. An object of type Square is assigned to a variable of type
 # Using this project
 This is an Eclipse project and it contains the .classpath and .project files used by Eclipse. If you use IntelliJ IDEA or another IDE you will need to create the project files applicable to that IDE.
 
-Start with the ShapeCalc class in the shape package. This contains the main method, which creates the various shapes. Use the debugger to step through the describe method. Observe the following:
+Start with the ShapeDemo class in the shape package. This contains the main method, which creates the various shapes. Use the debugger to step through the describe method. Observe the following:
 
 * The describe method is defined in the BaseShape abstract class. This class also declares the shapeInfo method. When shapeInfo is called on a Square object, the debugger jumps into the shapeInfo method in the Square class. When shapeInfo is called on a Rectangle object, the debugger jumps into the shapeInfo method in the Rectangle class. The Square class uses Polymorphism to redefine the shapeInfo method in its parent class.
 

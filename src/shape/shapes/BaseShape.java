@@ -13,9 +13,11 @@ import shape.SideInfo;
 import java.util.TreeMap;
 
 /**
- * This abstract class implements the Shape interface. This is a convenience class that provides an implementation of
- * the {@link #describe()} method. It declares two other abstract methods: {@link #shapeName()} and
- * {@link #shapeInfo()}. These methods are used to correctly build the text in the {@link #describe()} method.
+ * This abstract class implements the Shape interface. This is a convenience
+ * class that provides an implementation of the {@link #describe()} method. It
+ * declares two other abstract methods: {@link #shapeName()} and
+ * {@link #shapeInfo()}. These methods are used to correctly build the text in
+ * the {@link #describe()} method.
  * 
  * @author Promineo
  *
@@ -32,10 +34,12 @@ public abstract class BaseShape implements Shape {
   protected abstract ShapeInfo shapeInfo();
 
   /**
-   * Implementation of the describe method declared in {@link Shape}. This calls the {@link #shapeName()},
-   * {@link #shapeInfo()}, {@link Shape#area()} and {@link Shape#perimeter()} methods to build the description. Note
-   * that this abstract class can declare an abstract method like {@link #shapeName()} and use it without defining a
-   * body. This is because the class is abstract, which means that a {@link BaseShape} cannot be created with the new
+   * Implementation of the describe method declared in {@link Shape}. This calls
+   * the {@link #shapeName()}, {@link #shapeInfo()}, {@link Shape#area()} and
+   * {@link Shape#perimeter()} methods to build the description. Note that this
+   * abstract class can declare an abstract method like {@link #shapeName()} and
+   * use it without defining a body. This is because the class is abstract,
+   * which means that a {@link BaseShape} cannot be created with the new
    * operator.
    */
   @Override
@@ -45,24 +49,27 @@ public abstract class BaseShape implements Shape {
     String perimeter = String.format("%.2f", perimeter());
     ShapeInfo info = shapeInfo();
 
-    String desc = "This shape is a " + info.getName() + ". It has " + info.getSides().size() + " sides:";
-
     Map<String, Double> sides = dedupeSides(info);
+
+    String desc =
+        "This shape is a " + info.getName() + ". It has " + sides.size()
+            + " length(s) used in the area and perimeter calculations:";
 
     for (Entry<String, Double> entry : sides.entrySet()) {
       desc += " " + entry.getKey() + "=" + entry.getValue() + ",";
     }
 
     desc = desc.substring(0, desc.length() - 1) + ".";
-    desc += " The perimeter of this " + info.getName() + " is " + perimeter + ".";
+    desc +=
+        " The perimeter of this " + info.getName() + " is " + perimeter + ".";
     desc += " The area of this " + info.getName() + " is " + area + ".";
 
     return splitString(desc);
   }
 
   /**
-   * This will "dedupe" the side names. So, a square has four sides but they're all the same. So only one side should be
-   * printed.
+   * This will "dedupe" the side names. So, a square has four sides but they're
+   * all the same. So only one side should be printed.
    * 
    * @param info
    * @return
@@ -78,7 +85,8 @@ public abstract class BaseShape implements Shape {
   }
 
   /**
-   * Creates a list of String in which each String is at most {@link #MAX_LENGTH} characters in length.
+   * Creates a list of String in which each String is at most
+   * {@link #MAX_LENGTH} characters in length.
    * 
    * @param desc
    * @return
@@ -96,8 +104,9 @@ public abstract class BaseShape implements Shape {
   }
 
   /**
-   * Finds the point at which to split the String. The String is split at a space so that it is as long as possible but
-   * not longer than the given length.
+   * Finds the point at which to split the String. The String is split at a
+   * space so that it is as long as possible but not longer than the given
+   * length.
    * 
    * @param desc The String to split.
    * @param maxLength The maximum length of the split String.

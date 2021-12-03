@@ -33,12 +33,12 @@ public class Square extends Rectangle {
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("square");
-    
+
     info.getSides().add(new SideInfo("side", width));
     info.getSides().add(new SideInfo("side", width));
     info.getSides().add(new SideInfo("side", width));
     info.getSides().add(new SideInfo("side", width));
-    
+
     return info;
   }
 

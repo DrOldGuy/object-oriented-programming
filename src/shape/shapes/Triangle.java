@@ -57,11 +57,11 @@ public class Triangle extends BaseShape {
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("triangle");
-    
+
     info.getSides().add(new SideInfo("a", a));
     info.getSides().add(new SideInfo("b", b));
     info.getSides().add(new SideInfo("c", c));
-    
+
     return info;
   }
 }

@@ -48,12 +48,12 @@ public class Rectangle extends BaseShape {
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("rectangle");
-    
+
     info.getSides().add(new SideInfo("width", width));
     info.getSides().add(new SideInfo("height", height));
     info.getSides().add(new SideInfo("width", width));
     info.getSides().add(new SideInfo("height", height));
-    
+
     return info;
   }
 

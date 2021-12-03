@@ -3,6 +3,7 @@
  */
 package shape;
 
+import shape.shapes.Circle;
 import shape.shapes.Rectangle;
 import shape.shapes.Square;
 import shape.shapes.Triangle;
@@ -14,7 +15,7 @@ import shape.shapes.Triangle;
  * @author Promineo
  *
  */
-public class ShapeCalc {
+public class ShapeDemo {
 
   /**
    * @param args
@@ -62,6 +63,15 @@ public class ShapeCalc {
      */
     Shape square = new Square(4);
     square.describe().forEach(line -> System.out.println(line));
+
+    System.out.println();
+
+    /*
+     * The circle does not really have any sides, but it does have a radius. The
+     * radius is supplied in the constructor.
+     */
+    Shape circle = new Circle(8);
+    circle.describe().forEach(line -> System.out.println(line));
   }
 
 }
