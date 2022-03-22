@@ -1,5 +1,7 @@
 # Object-Oriented Programming
-This project contains commented classes that demonstrate the principles of object-oriented programming. Start with the PowerPoint presentation in the project root: "The Shape of OOP.pptx". This will orient you to the project.
+This project contains commented classes that demonstrate the principles of object-oriented programming. Start with the PowerPoint presentation in the project root: "The Shape of OOP.pptx". This will orient you to the project. 
+
+You can also take a look at StackHeapDemo.drawio. (You will need Draw.io to view this file.) This file shows the relationship between the stack and the heaps, and how Java objects are stored in memory.
 
 # Object-Oriented Principles
 This project demonstrates the four principles of Object-Oriented Programming: abstraction, encapsulation, inheritance and polymorphism.
