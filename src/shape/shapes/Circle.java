@@ -4,7 +4,7 @@
 package shape.shapes;
 
 import shape.ShapeInfo;
-import shape.SideInfo;
+import shape.Dimension;
 
 /**
  * This is an abstraction of a circle.
@@ -45,7 +45,7 @@ public class Circle extends BaseShape {
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("circle");
 
-    info.getSides().add(new SideInfo("radius", radius));
+    info.getDimensions().add(new Dimension("radius", radius));
 
     return info;
   }

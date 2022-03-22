@@ -4,7 +4,7 @@
 package shape.shapes;
 
 import shape.ShapeInfo;
-import shape.SideInfo;
+import shape.Dimension;
 
 /**
  * A square is a rectangle with the constraint that all sides are the same
@@ -34,10 +34,10 @@ public class Square extends Rectangle {
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("square");
 
-    info.getSides().add(new SideInfo("side", width));
-    info.getSides().add(new SideInfo("side", width));
-    info.getSides().add(new SideInfo("side", width));
-    info.getSides().add(new SideInfo("side", width));
+    info.getDimensions().add(new Dimension("side", width));
+    info.getDimensions().add(new Dimension("side", width));
+    info.getDimensions().add(new Dimension("side", width));
+    info.getDimensions().add(new Dimension("side", width));
 
     return info;
   }

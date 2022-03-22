@@ -7,12 +7,14 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
+ * This class allows a shape class to provide a description about itself.
+ * 
  * @author Promineo
  *
  */
 public class ShapeInfo {
   private String name;
-  private List<SideInfo> sides = new LinkedList<>();
+  private final List<Dimension> dimensions = new LinkedList<>();
 
   public ShapeInfo(String shapeName) {
     this.name = shapeName;
@@ -28,8 +30,8 @@ public class ShapeInfo {
   /**
    * @return the sideInfo
    */
-  public List<SideInfo> getSides() {
-    return sides;
+  public List<Dimension> getDimensions() {
+    return dimensions;
   }
 
   /**
@@ -37,6 +39,6 @@ public class ShapeInfo {
    */
   @Override
   public String toString() {
-    return "ShapeInfo [name=" + name + ", sides=" + sides + "]";
+    return "ShapeInfo [name=" + name + ", dimensions=" + dimensions + "]";
   }
 }

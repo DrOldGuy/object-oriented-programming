@@ -4,13 +4,13 @@
 package shape;
 
 /**
- * This class provides information about a side, storing its name and length.
- * For example, a rectangle has two sides: width and height.
+ * This class provides information about a dimension (side), storing its name and length. For
+ * example, a rectangle has two sides: width and height.
  * 
  * @author Promineo
  *
  */
-public class SideInfo {
+public class Dimension {
   private String name;
   private double length;
 
@@ -18,7 +18,7 @@ public class SideInfo {
    * @param name
    * @param length
    */
-  public SideInfo(String name, double length) {
+  public Dimension(String name, double length) {
     this.name = name;
     this.length = length;
   }

@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import shape.Shape;
 import shape.ShapeInfo;
-import shape.SideInfo;
+import shape.Dimension;
 import java.util.TreeMap;
 
 /**
@@ -49,13 +49,14 @@ public abstract class BaseShape implements Shape {
     String perimeter = String.format("%.2f", perimeter());
     ShapeInfo info = shapeInfo();
 
-    Map<String, Double> sides = dedupeSides(info);
+    Map<String, Double> dimensions = dedupeDimensions(info);
+    String dimension = dimensions.size() == 1 ? "dimension" : "dimensions";
 
     String desc =
-        "This shape is a " + info.getName() + ". It has " + sides.size()
-            + " length(s) used in the area and perimeter calculations:";
+        "This shape is a " + info.getName() + ". It has " + dimensions.size()
+            + " " + dimension  + " used in the area and perimeter calculations:";
 
-    for (Entry<String, Double> entry : sides.entrySet()) {
+    for (Entry<String, Double> entry : dimensions.entrySet()) {
       desc += " " + entry.getKey() + "=" + entry.getValue() + ",";
     }
 
@@ -74,10 +75,10 @@ public abstract class BaseShape implements Shape {
    * @param info
    * @return
    */
-  private Map<String, Double> dedupeSides(ShapeInfo info) {
+  private Map<String, Double> dedupeDimensions(ShapeInfo info) {
     Map<String, Double> sides = new TreeMap<>();
 
-    for (SideInfo side : info.getSides()) {
+    for (Dimension side : info.getDimensions()) {
       sides.put(side.getName(), side.getLength());
     }
 

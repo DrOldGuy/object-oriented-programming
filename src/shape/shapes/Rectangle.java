@@ -4,7 +4,7 @@
 package shape.shapes;
 
 import shape.ShapeInfo;
-import shape.SideInfo;
+import shape.Dimension;
 
 /**
  * This class defines a rectangle shape.
@@ -14,18 +14,18 @@ import shape.SideInfo;
  */
 public class Rectangle extends BaseShape {
   protected double width;
-  protected double height;
+  protected double length;
 
   /**
    * Rectangles are 4-sided shapes in which the opposite sides have the same
    * length. The constructor supplies the lengths of the two sides.
    * 
    * @param width The width of the rectangle
-   * @param height The height of the rectangle
+   * @param length The height of the rectangle
    */
-  public Rectangle(double width, double height) {
+  public Rectangle(double width, double length) {
     this.width = width;
-    this.height = height;
+    this.length = length;
   }
 
   /**
@@ -34,7 +34,7 @@ public class Rectangle extends BaseShape {
    */
   @Override
   public double area() {
-    return width * height;
+    return width * length;
   }
 
   /**
@@ -42,17 +42,19 @@ public class Rectangle extends BaseShape {
    */
   @Override
   public double perimeter() {
-    return (width + height) * 2;
+    return (width + length) * 2;
   }
 
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("rectangle");
+    String widthName = "width";
+    String lengthName = "length";
 
-    info.getSides().add(new SideInfo("width", width));
-    info.getSides().add(new SideInfo("height", height));
-    info.getSides().add(new SideInfo("width", width));
-    info.getSides().add(new SideInfo("height", height));
+    info.getDimensions().add(new Dimension(widthName, width));
+    info.getDimensions().add(new Dimension(lengthName, length));
+    info.getDimensions().add(new Dimension(widthName, width));
+    info.getDimensions().add(new Dimension(lengthName, length));
 
     return info;
   }

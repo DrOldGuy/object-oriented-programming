@@ -4,7 +4,7 @@
 package shape.shapes;
 
 import shape.ShapeInfo;
-import shape.SideInfo;
+import shape.Dimension;
 
 /**
  * This class defines a triangular shape. Note the object-oriented principle of
@@ -58,9 +58,9 @@ public class Triangle extends BaseShape {
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("triangle");
 
-    info.getSides().add(new SideInfo("a", a));
-    info.getSides().add(new SideInfo("b", b));
-    info.getSides().add(new SideInfo("c", c));
+    info.getDimensions().add(new Dimension("a", a));
+    info.getDimensions().add(new Dimension("b", b));
+    info.getDimensions().add(new Dimension("c", c));
 
     return info;
   }
