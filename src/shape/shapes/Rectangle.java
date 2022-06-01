@@ -17,8 +17,8 @@ public class Rectangle extends BaseShape {
   protected double length;
 
   /**
-   * Rectangles are 4-sided shapes in which the opposite sides have the same
-   * length. The constructor supplies the lengths of the two sides.
+   * Rectangles are 4-sided shapes in which the opposite sides have the same length. The constructor
+   * supplies the lengths of the two sides.
    * 
    * @param width The width of the rectangle
    * @param length The height of the rectangle
@@ -29,8 +29,7 @@ public class Rectangle extends BaseShape {
   }
 
   /**
-   * The area of a rectangle is the product of the lengths of the two adjacent
-   * sides.
+   * The area of a rectangle is the product of the lengths of the two adjacent sides.
    */
   @Override
   public double area() {
@@ -45,6 +44,9 @@ public class Rectangle extends BaseShape {
     return (width + length) * 2;
   }
 
+  /**
+   * 
+   */
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("rectangle");

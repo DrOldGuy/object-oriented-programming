@@ -7,11 +7,10 @@ import shape.ShapeInfo;
 import shape.Dimension;
 
 /**
- * A square is a rectangle with the constraint that all sides are the same
- * length. In other words, a square is a subset of rectangles. A square is a
- * rectangle but a rectangle is not necessarily a square. This allows the Square
- * to use the {@link Rectangle#area()} and {@link Rectangle#perimeter()} methods
- * (inheritance).
+ * A square is a rectangle with the constraint that all sides are the same length. In other words, a
+ * square is a subset of rectangles. A square is a rectangle but a rectangle is not necessarily a
+ * square. This allows the Square to use the {@link Rectangle#area()} and
+ * {@link Rectangle#perimeter()} methods (inheritance).
  * 
  * @author Promineo
  *
@@ -24,12 +23,14 @@ public class Square extends Rectangle {
    */
   public Square(double side) {
     /*
-     * Call the Rectangle constructor passing in the same length for each side
-     * of the Rectangle.
+     * Call the Rectangle constructor passing in the same length for each side of the Rectangle.
      */
     super(side, side);
   }
 
+  /**
+   * 
+   */
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("square");

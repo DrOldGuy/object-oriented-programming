@@ -7,9 +7,9 @@ import shape.ShapeInfo;
 import shape.Dimension;
 
 /**
- * This class defines a triangular shape. Note the object-oriented principle of
- * abstraction: for the purposes of this class it is not necessary to know the
- * angles of the triangle. So, only the line lengths are stored.
+ * This class defines a triangular shape. Note the object-oriented principle of abstraction: for the
+ * purposes of this class it is not necessary to know the angles of the triangle. So, only the line
+ * lengths are stored.
  * 
  * @author Promineo
  *
@@ -33,8 +33,8 @@ public class Triangle extends BaseShape {
   }
 
   /**
-   * This uses Heron's formula to calculate the area of the Triangle without
-   * knowing the height and base.
+   * This uses Heron's formula to calculate the area of the Triangle without knowing the height and
+   * base.
    */
   @Override
   public double area() {
@@ -54,6 +54,9 @@ public class Triangle extends BaseShape {
     return a + b + c;
   }
 
+  /**
+   * 
+   */
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("triangle");

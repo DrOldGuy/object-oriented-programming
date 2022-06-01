@@ -16,8 +16,7 @@ public class Circle extends BaseShape {
   private double radius;
 
   /**
-   * The constructor takes the radius, which is used to calculate the area and
-   * perimeter.
+   * The constructor takes the radius, which is used to calculate the area and perimeter.
    * 
    * @param radius
    */
@@ -41,6 +40,9 @@ public class Circle extends BaseShape {
     return 2 * Math.PI * radius;
   }
 
+  /**
+   * 
+   */
   @Override
   protected ShapeInfo shapeInfo() {
     ShapeInfo info = new ShapeInfo("circle");
