@@ -1,7 +1,7 @@
 /**
  * 
  */
-package shape;
+package oop.shape;
 
 /**
  * This class provides information about a dimension (side), storing its name and length. For

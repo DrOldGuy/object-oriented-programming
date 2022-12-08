@@ -1,15 +1,12 @@
 /**
  * 
  */
-package shape.shapes;
+package oop.shape;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
-import shape.Shape;
-import shape.ShapeInfo;
-import shape.Dimension;
 import java.util.TreeMap;
 
 /**

@@ -1,10 +1,11 @@
 /**
  * 
  */
-package shape.shapes;
+package oop.shapes;
 
-import shape.ShapeInfo;
-import shape.Dimension;
+import oop.shape.BaseShape;
+import oop.shape.Dimension;
+import oop.shape.ShapeInfo;
 
 /**
  * This is an abstraction of a circle.

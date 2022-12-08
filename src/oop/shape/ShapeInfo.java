@@ -1,7 +1,7 @@
 /**
  * 
  */
-package shape;
+package oop.shape;
 
 import java.util.LinkedList;
 import java.util.List;

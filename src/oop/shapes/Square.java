@@ -1,10 +1,10 @@
 /**
  * 
  */
-package shape.shapes;
+package oop.shapes;
 
-import shape.ShapeInfo;
-import shape.Dimension;
+import oop.shape.Dimension;
+import oop.shape.ShapeInfo;
 
 /**
  * A square is a rectangle with the constraint that all sides are the same length. In other words, a

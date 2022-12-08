@@ -1,12 +1,13 @@
 /**
  * 
  */
-package shape;
+package oop;
 
-import shape.shapes.Circle;
-import shape.shapes.Rectangle;
-import shape.shapes.Square;
-import shape.shapes.Triangle;
+import oop.shape.Shape;
+import oop.shapes.Circle;
+import oop.shapes.Rectangle;
+import oop.shapes.Square;
+import oop.shapes.Triangle;
 
 /**
  * This is the entry point for the application. It creates some shapes and calls the describe method
